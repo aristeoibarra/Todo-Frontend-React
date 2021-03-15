@@ -45,7 +45,6 @@ class Todo extends Component {
   };
 
   requestPost = async () => {
-    delete this.state.form._id;
     await axios
       .post(url + "/create", this.state.form)
       .then((res) => {
